@@ -58,7 +58,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 date.getFullYear()}
             </Typography>
             <Typography variant="body2">
-              Angka kasus aktiv dari Covid19
+              Angka kasus aktif dari Covid19
             </Typography>
           </CardContent>
         </Grid>
@@ -90,7 +90,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 date.getFullYear()}
             </Typography>
             <Typography variant="body2">
-              Angka yang sembuh dari Covid19
+              Pesentase Kesembuhan dari Covid19:{" "}
+              {((recovered.value / confirmed.value) * 100).toFixed(2)}%
             </Typography>
           </CardContent>
         </Grid>
@@ -121,7 +122,10 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 " " +
                 date.getFullYear()}
             </Typography>
-            <Typography variant="body2">Angka kematian dari Covid19</Typography>
+            <Typography variant="body2">
+              Pesentase Kematian dari Covid19:{" "}
+              {((deaths.value / confirmed.value) * 100).toFixed(2)}%
+            </Typography>
           </CardContent>
         </Grid>
       </Grid>
