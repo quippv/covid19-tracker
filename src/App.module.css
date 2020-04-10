@@ -1,0 +1,26 @@
+body {
+  background-color: #efefef;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h5 {
+  font-family: sans-serif;
+}
+
+@media (max-width: 770px) {
+  .container {
+    margin: 0 5%;
+  }
+
+  .images {
+    width: 50%;
+    order: -3;
+    margin-top: 20px;
+  }
+}
